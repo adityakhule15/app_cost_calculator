@@ -1,6 +1,8 @@
 
 from django.http import JsonResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+
 
 # Static data for categories and features
 CATEGORIES = {
@@ -13,6 +15,7 @@ HOURLY_RATE = 10
 def index(request):
     return render(request, 'calculator/index.html', {'categories': CATEGORIES})
 
+@csrf_exempt
 def calculate_cost(request):
     if request.method == "POST":
         category = request.POST.get('category')

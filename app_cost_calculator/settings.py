@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-@c0o$7$7^x*2haypu2=r#6kmchq!qz*nql7#9k_05v%m%1=m@m
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = [
+    'https://app-cost-calculator-b6ca.onrender.com',
+]
 
 
 # Application definition
