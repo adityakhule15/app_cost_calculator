@@ -11,6 +11,17 @@
         "src": "/(.*)",
         "dest": "app_cost_calculator/wsgi.py"
       }
-    ]
+    ],
+    "functions": {
+      "api/**/*.py": {
+        "maxDuration": 10
+      }
+    },
+    "env": {
+      "PYTHON_VERSION": "3.9"
+    },
+    "github": {
+      "silent": true
+    }
   }
   
